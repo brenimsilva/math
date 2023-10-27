@@ -1,0 +1,11 @@
+{
+  "name": "math",
+  "version": "1.0.0",
+  "description": "Uma ideia de aplicacao para estudar matematica com programacao",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Breno Almeida",
+  "license": "ISC"
+}
