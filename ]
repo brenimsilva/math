@@ -1,0 +1,11 @@
+import Pythagoras from "../../models/Pythagoras.js";
+import Matematica from "../../models/Matematica.js";
+const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+const ctx = canvas.getContext();
+console.log("Triangle");
+
+
+const x = Pythagoras.calcCateto(5, 4);
+const y = Pythagoras.calcHipotenusa(3,4);
+
+
