@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="dash-menu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style/layout.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    </div>
-    <main id="app">
+        <title>Document</title>
+    </head>
+    <body>
+        <main id="container">
+            <div id="dash-menu" class="card">
+                <section class="dash-header">
+                    <div class="header-content">
+                        <h1>
+                            CodeMática
+                        </h1>
+                        <div class="line"></div>
+                    </div>
+                </section>
+                <div class="options-container">
+                    <section class="dash-options">
+                        <ul class="dash-options-ul">
+                            <li class="dash-options-li">
+                                <div class="dash-options-option menu-option"><i class="fa-solid fa-square-root-variable"></i>Álgebra</div>
+                            </li>
+                            <li class="dash-options-li">
+                                <div class="dash-options-option option-selected menu-option"><i class="fa-solid fa-shapes"></i>Geometria</div>
+                            </li>
+                            <li class="dash-options-li">
+                                <div class="dash-options-option menu-option"><i class="fa-solid fa-microchip"></i>Binário</div>
+                            </li>
+                            <li class="dash-options-li">
+                                <div class="dash-options-option menu-option"><i class="fa-solid fa-toggle-on"></i>Booleano</div>
+                            </li>
+                            <li class="dash-options-li">
+                                <div class="dash-options-option menu-option"><i class="fa-solid fa-coins"></i>Conjuntos</div>
+                            </li>
+                            <li class="dash-options-li">
+                                <div class="dash-options-option menu-option"><i class="fa-regular fa-lightbulb"></i>Portas Lógicas</div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="dash-footer">
+                        <ul class="dash-footer-ul">
+                            <li class="dash-footer-li">
+                                <div class="dash-footer-option menu-option"><i class="fa-solid fa-circle-exclamation"></i>Sobre</div>
+                            </li>
+                            <li class="dash-footer-li">
+                                <div class="dash-footer-option menu-option"><i class="fa-solid fa-circle-half-stroke"></i>Dark/Light</div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
 
-    </main>
-    <script src="./dist/index.js" type="module"></script>
-</body>
+
+            </div>
+            <section id="app">
+                <div class="app-header card"></div>
+                <div class="app-body card"></div>
+                <div class="app-footer card"></div>
+            </section>
+        </main>
+        <script src="./dist/index.js" type="module"></script>
+    </body>
 </html>
