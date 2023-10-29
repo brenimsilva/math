@@ -1,5 +1,5 @@
-import Pythagoras from "../../models/Pythagoras.js";
-import Matematica from "../../models/Matematica.js";
+import Pythagoras from "../../../models/Pythagoras.js";
+import Matematica from "../../../models/Matematica.js";
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
 

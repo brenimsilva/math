@@ -10,7 +10,6 @@
 export default class Pythagoras {
     constructor() {
     }
-    // O Quadrado da hipotenusa é igual à soma dos quadrados dos catetos
     static calcHipotenusa(a, b) {
         const c = (a * a) + (b * b);
         return Math.sqrt(c);

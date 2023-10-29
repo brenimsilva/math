@@ -21,8 +21,8 @@ export default class Matematica {
             fatorado = fatorado / fator;
         }
         const sqrt = 0;
-        const reduce = fatores.reduce((acc, curr) => {
-        }, []);
+        // const reduce = fatores.reduce((acc, curr) => {
+        // }, [])
         return sqrt;
     }
 }
