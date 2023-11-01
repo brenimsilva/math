@@ -3,17 +3,17 @@ import PortasLogicasPage from "./pages/portas_logicas/PortasLogicasPage.js";
 const menuDivs = document.querySelectorAll(".menu-option");
 const appBody = document.querySelector(".app-body");
 const menu = [];
-menuDivs.forEach((div, index) => {
+menuDivs.forEach((div) => {
     menu.push({
         element: div,
         name: div.innerText,
-        route: undefined,
+        route: "",
         selected: false
     });
 });
 menu.forEach((el) => {
-    if (el.innerText === "Portas Lógicas") {
-        el.addEventListener('click', () => {
+    if (el.element.innerText === "Portas Lógicas") {
+        el.element.addEventListener('click', () => {
             PortasLogicasPage.render(appBody);
         });
     }
@@ -31,5 +31,5 @@ menu.forEach((item, index) => {
     });
 });
 console.log("index");
-const result = PortaLogica.XNOR(true, true);
+const result = PortaLogica.NAND(0, 1);
 console.log(result);

@@ -9,6 +9,7 @@ type menuItem = {
     name: string;
     selected: boolean;
 }
+
 const menu: menuItem[] = []
 
 
@@ -16,7 +17,7 @@ menuDivs.forEach((div) => {
         menu.push({
             element: div,
             name: div.innerText,
-            route: undefined,
+            route: "",
             selected: false 
         })
 })
@@ -45,10 +46,8 @@ menu.forEach((item, index) => {
     })
 })
 
-
-
 console.log("index");
-const result = PortaLogica.XNOR(true, true);
+const result = PortaLogica.NAND(0,1);
 console.log(result);
 
 

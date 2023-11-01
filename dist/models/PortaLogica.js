@@ -1,27 +1,61 @@
 export default class PortaLogica {
     constructor() { }
-    static Buffer(a) {
-        return a;
+    static BUFFER(value) {
+        return value;
     }
-    static AND(a, b) {
-        return a === true && b === true;
+    static NOT(value) {
+        if (value === 0)
+            return 1;
+        else
+            return 0;
     }
-    static OR(a, b) {
-        return a === true || b === true;
+    static AND(value1, value2) {
+        if (value1 === 1 && value2 === 1)
+            return 1;
+        else
+            return 0;
     }
-    static XOR(a, b) {
-        return (a === true && b === false) || (a === false && b === true);
+    static OR(value1, value2) {
+        if (value1 === 1 || value2 === 1)
+            return 1;
+        else
+            return 0;
     }
-    static NAND(a, b) {
-        return this.NOT(this.AND(a, b));
+    static XOR(value1, value2) {
+        return (this.OR(this.AND(value1, this.NOT(value2)), this.AND(value2, this.NOT(value2))));
     }
-    static NOR(a, b) {
-        return this.NOT(this.OR(a, b));
+    static NAND(value1, value2) {
+        return this.NOT(this.AND(value1, value2));
     }
-    static NOT(a) {
-        return !a;
+    static NOR(value1, value2) {
+        return this.NOT(this.OR(value1, value2));
     }
-    static XNOR(a, b) {
-        return a === b;
+    static XNOR(value1, value2) {
+        return this.OR(this.NOT(this.OR(value1, value2)), this.AND(value1, value2));
     }
 }
+// public static Buffer(a: boolean) {
+//     return a;
+// }
+// public static AND(a: boolean,b: boolean) {
+//     return a === true && b === true;
+// }
+// public static OR(a: boolean, b: boolean) {
+//     return a === true || b === true;
+// }
+// public static XOR(a: boolean, b: boolean) {
+//     return (a === true && b === false) || (a === false && b === true)
+// }
+// public static NAND(a: boolean, b: boolean) {
+//     return this.NOT(this.AND(a,b));
+// }
+// public static NOR(a: boolean, b: boolean) {
+//     return this.NOT(this.OR(a,b));
+// }
+// public static NOT(a: boolean) {
+//     return !a;
+// }
+// public static XNOR(a: boolean, b: boolean) {
+//     return a === b
+// }
+////////////////////////////////////////////////////////////
