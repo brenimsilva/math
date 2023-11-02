@@ -1,12 +1,12 @@
-export default class PortasLogicasPage {
+export default class AlgebraPage {
     render() {
         return { header: this._generateHeader(), body: this._generateBody(), footer: this._generateFooter() };
     }
     _generateBody() {
-        return "Voce esta na pagina Portas Lógicas";
+        return "Voce esta na pagina Algebra";
     }
     _generateHeader() {
-        return "Portas Lógicas";
+        return "Algebra";
     }
     _generateFooter() {
         return "";
