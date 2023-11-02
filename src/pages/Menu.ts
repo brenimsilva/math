@@ -1,7 +1,12 @@
 import IPageRender from "./IPageRender.js";
-import Pager, { PageStructure } from "./Pager.js";
+import Pager from "./Pager.js";
 import AlgebraPage from "./algebra/AlgebraPage.js";
+import BinarioPage from "./binario/BinarioPage.js";
+import BooleanoPage from "./booleano/BooleanoPage.js";
+import ConjuntoPage from "./conjunto/ConjuntoPage.js";
+import GeometriaPage from "./geometria/GeometriaPage.js";
 import PortasLogicasPage from "./portas_logicas/PortasLogicasPage.js";
+import SobrePage from "./sobre/SobrePage.js";
 
 
 export type menuItem = {
@@ -15,12 +20,12 @@ export type menuItem = {
 export default class Menu {
     public static menuOptions: menuItem[] = [
         {element: document.getElementById("menu-portas-logicas") as HTMLDivElement, route: "portas-logicas", name: "Portas Lógicas", selected: false, generatePage: new PortasLogicasPage()},
-        {element: document.getElementById("menu-conjuntos") as HTMLDivElement, route: "conjuntos", name: "Conjuntos", selected: false, generatePage: () => {}},
-        {element: document.getElementById("menu-booleano") as HTMLDivElement, route: "booleano", name: "Booleano", selected: false, generatePage: () => {}},
-        {element: document.getElementById("menu-binario") as HTMLDivElement, route: "binario", name: "Binário", selected: false, generatePage: () => {}},
-        {element: document.getElementById("menu-geometria") as HTMLDivElement, route: "geometria", name: "Geometria", selected: false, generatePage: () => {}},
+        {element: document.getElementById("menu-conjuntos") as HTMLDivElement, route: "conjuntos", name: "Conjuntos", selected: false, generatePage: new ConjuntoPage()},
+        {element: document.getElementById("menu-booleano") as HTMLDivElement, route: "booleano", name: "Booleano", selected: false, generatePage: new BooleanoPage()},
+        {element: document.getElementById("menu-binario") as HTMLDivElement, route: "binario", name: "Binário", selected: false, generatePage: new BinarioPage()},
+        {element: document.getElementById("menu-geometria") as HTMLDivElement, route: "geometria", name: "Geometria", selected: false, generatePage: new GeometriaPage()},
         {element: document.getElementById("menu-algebra") as HTMLDivElement, route: "algebra", name: "Álgebra", selected: false, generatePage: new AlgebraPage()},
-        {element: document.getElementById("menu-sobre") as HTMLDivElement, route: "sobre", name: "Sobre", selected: false, generatePage: () => {}},
+        {element: document.getElementById("menu-sobre") as HTMLDivElement, route: "sobre", name: "Sobre", selected: false, generatePage: new SobrePage()},
     ]
     private static _selectedMenu: menuItem; 
 
