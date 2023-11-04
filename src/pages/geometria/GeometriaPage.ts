@@ -6,15 +6,20 @@ export default class GeometriaPage implements IPageRender {
         return {header: this._generateHeader(), body: this._generateBody(), footer: this._generateFooter()} 
     }
 
-    private _generateBody(): string {
-        return "Voce esta na pagina Geometria"
+    private _generateBody(): HTMLDivElement {
+        const container = document.createElement("div");
+        return container;
     }
 
-    private _generateHeader(): string {
-        return "Geometria"
+    private _generateHeader(): HTMLDivElement {
+        const div = document.createElement("div");
+        const h1 = document.createElement("h1");
+        h1.innerText = "Geometria";
+        div.appendChild(h1);
+        return div;
     }
 
-    private _generateFooter(): string {
-        return ""
+    private _generateFooter(): HTMLDivElement {
+        return document.createElement("div");
     }
 }

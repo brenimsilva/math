@@ -3,12 +3,17 @@ export default class ConjuntoPage {
         return { header: this._generateHeader(), body: this._generateBody(), footer: this._generateFooter() };
     }
     _generateBody() {
-        return "Voce esta na pagina Conjunto";
+        const container = document.createElement("div");
+        return container;
     }
     _generateHeader() {
-        return "Conjunto";
+        const div = document.createElement("div");
+        const h1 = document.createElement("h1");
+        h1.innerText = "Conjuntos";
+        div.appendChild(h1);
+        return div;
     }
     _generateFooter() {
-        return "Conjunto Footer";
+        return document.createElement("div");
     }
 }

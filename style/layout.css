@@ -117,17 +117,29 @@ body {
 
 .app-header {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
     height: 10vh;
     background-color: rgb(255, 255, 255);
     border-radius: 12px;
 }
 .app-body {
+    display: flex;
+    box-sizing: border-box;
+    overflow: auto;
+    padding: 20px;
     width: 100%;
     height: 50vh;
     background-color: rgb(255, 255, 255);
     border-radius: 12px;
 }
 .app-footer {
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
     width: 100%;
     background-color: rgb(255, 255, 255);
     height: 30vh;

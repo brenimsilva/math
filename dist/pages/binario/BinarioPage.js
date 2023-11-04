@@ -3,12 +3,17 @@ export default class BinarioPage {
         return { header: this._generateHeader(), body: this._generateBody(), footer: this._generateFooter() };
     }
     _generateBody() {
-        return "Voce esta na pagina Binario";
+        const container = document.createElement("div");
+        return container;
     }
     _generateHeader() {
-        return "Binario";
+        const div = document.createElement("div");
+        const h1 = document.createElement("h1");
+        h1.innerText = "Binário";
+        div.appendChild(h1);
+        return div;
     }
     _generateFooter() {
-        return "Binario Footer";
+        return document.createElement("div");
     }
 }

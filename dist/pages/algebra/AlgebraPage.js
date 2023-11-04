@@ -3,12 +3,17 @@ export default class AlgebraPage {
         return { header: this._generateHeader(), body: this._generateBody(), footer: this._generateFooter() };
     }
     _generateBody() {
-        return "Voce esta na pagina Algebra";
+        const container = document.createElement("div");
+        return container;
     }
     _generateHeader() {
-        return "Algebra";
+        const div = document.createElement("div");
+        const h1 = document.createElement("h1");
+        h1.innerText = "Álgebra";
+        div.appendChild(h1);
+        return div;
     }
     _generateFooter() {
-        return "";
+        return document.createElement("div");
     }
 }

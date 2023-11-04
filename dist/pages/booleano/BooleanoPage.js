@@ -3,12 +3,17 @@ export default class BooleanoPage {
         return { header: this._generateHeader(), body: this._generateBody(), footer: this._generateFooter() };
     }
     _generateBody() {
-        return "Voce esta na pagina Booleano";
+        const container = document.createElement("div");
+        return container;
     }
     _generateHeader() {
-        return "Booleano";
+        const div = document.createElement("div");
+        const h1 = document.createElement("h1");
+        h1.innerText = "Booleano";
+        div.appendChild(h1);
+        return div;
     }
     _generateFooter() {
-        return "Booleano Footer";
+        return document.createElement("div");
     }
 }

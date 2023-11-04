@@ -14,15 +14,15 @@ export default class Pager {
     }
     static set header(html) {
         PagesUtil.clear(this.header);
-        this._header.innerHTML = `<h1>${html}</h1>`;
+        this._header.appendChild(html);
     }
     static set body(html) {
         PagesUtil.clear(this.body);
-        this._body.innerHTML = html;
+        this._body.appendChild(html);
     }
     static set footer(html) {
         PagesUtil.clear(this.footer);
-        this._footer.innerHTML = html;
+        this._footer.appendChild(html);
     }
     constructor() { }
 }

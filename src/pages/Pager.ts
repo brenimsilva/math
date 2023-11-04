@@ -1,6 +1,6 @@
 import PagesUtil from "./PagesUtil.js";
 
-export type PageStructure = {header: string, body: string, footer: string};
+export type PageStructure = {header: HTMLDivElement, body: HTMLDivElement, footer: HTMLDivElement};
 export default class Pager {
     private static _header: HTMLDivElement = document.getElementById("app-header") as HTMLDivElement;
     private static _body: HTMLDivElement = document.getElementById("app-body") as HTMLDivElement;
@@ -18,19 +18,19 @@ export default class Pager {
         return this._footer
     }
 
-    static set header(html: string) {
+    static set header(html: HTMLDivElement) {
         PagesUtil.clear(this.header);
-        this._header.innerHTML = `<h1>${html}</h1>`;
+        this._header.appendChild(html);
     }
 
-    static set body(html: string) {
+    static set body(html: HTMLDivElement) {
         PagesUtil.clear(this.body);
-        this._body.innerHTML = html;
+        this._body.appendChild(html)
     }
 
-    static set footer(html: string) {
+    static set footer(html: HTMLDivElement) {
         PagesUtil.clear(this.footer);
-        this._footer.innerHTML = html;
+        this._footer.appendChild(html)
     }
 
     constructor() {}

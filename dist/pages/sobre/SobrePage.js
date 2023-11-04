@@ -3,12 +3,17 @@ export default class SobrePage {
         return { header: this._generateHeader(), body: this._generateBody(), footer: this._generateFooter() };
     }
     _generateBody() {
-        return "Voce esta na pagina Sobre";
+        const container = document.createElement("div");
+        return container;
     }
     _generateHeader() {
-        return "Sobre";
+        const div = document.createElement("div");
+        const h1 = document.createElement("h1");
+        h1.innerText = "Sobre";
+        div.appendChild(h1);
+        return div;
     }
     _generateFooter() {
-        return "Footer da pagina Sobre";
+        return document.createElement("div");
     }
 }
